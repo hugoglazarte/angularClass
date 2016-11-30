@@ -55,26 +55,29 @@
     </div>
 
 
-    <div class="container" ng-controller="ProductController">
+    <!-- VIEW -->
+
+        
+            <div class="container" ng-controller="ProductController">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="{{ image }}" alt="">
+                <img class="img-responsive" src="{{ product.image }}" alt="">
             </div>
 
             <div class="col-md-4">
-                <h3>{{ productTitle }}</h3>
+                <h3>{{ product.productTitle }}</h3>
 
                 <h4>Fecha de Publicacion:</h4>
 
-                <p>{{ fecha }}</p>
+                <p>{{ product.fecha }}</p>
 
                 <h4>Descripcion:</h4>
 
-                <p>{{ descripcion }}</p>
+                <p>{{ product.descripcion }}</p>
 
                 <h4>Precio:</h4>
 
-                <p>{{ precio }}</p>
+                <p>{{ product.precio }}</p>
 
                 <h4>Rating:</h4>
                 <p>
@@ -85,11 +88,34 @@
                 <span class="glyphicon glyphicon-star-empty"></span>
                 </p>
 
+                <div ng-if="product.featured"> <!-- AGREGO UNA CONDICION on NG-if -->
+                    
+                    <p>ES FEATURE</p>
+
+                </div>
+
+                <ul>
+                    
+                    <li ng-repeat="tag in product.tags">
+                        
+                        {{tag}}
+
+                    </li>
+
+                </ul>
+
                 <p><button type="button" class="btn btn-primary btn-lg">COMPRAR</button></p>
 
             </div>
 
+
+
     </div>
+
+    <!-- CLOSE VIEW -->
+
+
+
 
 
     <!-- jQuery -->
