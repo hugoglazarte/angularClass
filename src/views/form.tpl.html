@@ -1,0 +1,39 @@
+<div class="container" ng-controller="FormController">
+
+	<div class="col-sm-4">
+
+		<h4>Nueva Noticia</h4>
+
+		<form id="formulario">
+
+			<div class="form-group">
+
+				<label for="titulo">{{ form.title }}</label>
+
+				<input type="text" class="form-control" name="titulo" id="titulo">
+
+			</div>
+
+			<div class="form-group">
+
+				<label for="descripcion">{{ form.description }}</label>
+
+				<textarea class="form-control" rows="5" name="descripcion" id="descripcion"></textarea>
+
+			</div>
+
+			<div class="form-group">
+
+				<label for="imagen">{{ form.imgTitle }}</label>
+
+				<input type="text" class="form-control" name="imagen" id="imagen">
+
+			</div>
+
+			<button id="boton" type="button" class="btn btn-primary">Agregar</button>
+
+		</form>
+
+	</div>
+
+</div>

@@ -1,0 +1,18 @@
+    <div class="container" ng-controller="ListProductController">
+
+
+      <h1>{{ title }}</h1>
+      <h1>{{ !!(title) ? title : 'undefined' }}</h1>
+
+
+
+      <div class="row">
+          <div class="col-md-4" ng-repeat="product in products">
+            <a href="">
+              <img src="{{product.image}}">
+              <h3>{{product.title}} </h3>
+              <h5 ng-if='product.featured'>Destacado</h5>
+            </a>
+          </div>
+      </div>
+    </div>

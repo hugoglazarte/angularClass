@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Proyecto AngularJS - Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/heroic-features.css" rel="stylesheet">
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app='My-app'>
+
+    <!-- <div ng-controller="NavigationController"> -->
+
+    <div>
+            
+        <div class="container">
+            
+            <div class="col-md-12">
+                
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIEW -->
+
+
+    <div class="container" ng-controller="ListProductController">
+      <h1>{{ title }}</h1>
+
+      <div class="row">
+          <div class="col-md-4" ng-repeat="product in products">
+            <a href="">
+              <img src="{{product.image}}">
+              <h3>{{product.title}}</h3>
+            </a>
+          </div>
+      </div>
+    </div>
+
+    <!-- CIERRA VIEW -->
+
+        
+         
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- AngularJS -->
+<!--     <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./js/app.js"></script> -->
+
+</body>
+
+</html>
